@@ -243,6 +243,6 @@ server.run()
 * 검증기 제거 및 기본 검증기 사용
 
 ## TODO
-* RequestWriter : 요청 라이터
-* ResponseReader : 응답 리더
-0
+* [ ] 기본 Validator 사용
+* [ ] RequestWriter : 요청 라이터
+* [ ] ResponseReader : 응답 리더
