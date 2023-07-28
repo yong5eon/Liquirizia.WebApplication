@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
+
 from sys import modules
 from importlib.machinery import (
 	SourceFileLoader,
-	SourcelessFileLoader,
 )
 from os.path import isdir
 
