@@ -5,7 +5,7 @@ from .RequestFilter import RequestFilter
 from .ResponseFilter import ResponseFilter
 from .CrossOriginResourceSharing import CrossOriginResourceSharing
 
-from .Validator import Validator
+from Liquirizia.Validator import Validator
 
 __all__ = (
 	'RequestRunnerProperties',
