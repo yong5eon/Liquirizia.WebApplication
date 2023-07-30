@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from collections import MutableSequence, MutableMapping, MutableSet
+from collections.abc import Sequence, Mapping, Set
 from datetime import datetime, date
 from decimal import Decimal
 from json import dumps, JSONEncoder
-from Liquirizia.DataModelObject.Immutable import DataTypeObject as ImmutableDataTypeObject
-from Liquirizia.DataModelObject.Mutable import DataTypeObject as MutableDataTypeObject
 
 from ...Serializer import Serializer
 
@@ -22,16 +20,15 @@ class TypeEncoder(JSONEncoder):
 	def default(self, obj):
 		if isinstance(obj, Decimal):
 			return float(obj)
-		if isinstance(obj, MutableSequence):
+		if isinstance(obj, Sequence):
 			return list(obj)
-		if isinstance(obj, MutableMapping):
+		if isinstance(obj, Mapping):
 			return dict(obj)
-		if isinstance(obj, MutableSet):
+		if isinstance(obj, Set):
 			return tuple(obj)
 		if isinstance(obj, (date, datetime)):
 			return obj.isoformat()
-		if isinstance(obj, (ImmutableDataTypeObject, MutableDataTypeObject)):
-			return obj.value()
+		# TODO : support DataModelObject
 		return None
 
 
