@@ -60,7 +60,4 @@ if __name__ == '__main__':
   decoded = SerializerHelper.Decode(encoded, 'application/json')
   print('DECODE WITH {} : {}'.format('application/json', decoded), file=sys.stdout)
 
-  encoded = SerializerHelper.Encode(val, 'application/xml')
-  print('ENCODE WITH {} : {}'.format('application/xml', encoded), file=sys.stdout)
-  decoded = SerializerHelper.Decode(encoded, 'application/xml')
-  print('DECODE WITH {} : {}'.format('application/xml', decoded), file=sys.stdout)
+  # TODO : sample with DataModelObject
