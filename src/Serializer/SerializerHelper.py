@@ -17,7 +17,7 @@ class SerializerHelper(Singleton):
 	"""
 	Serializer Helper Class
 	"""
-	def onInit(self):
+	def __init__(self):
 		self.serializers = {
 			'text/plain': (TextEncoder, TextDecoder),
 			'text': (TextEncoder, TextDecoder),
