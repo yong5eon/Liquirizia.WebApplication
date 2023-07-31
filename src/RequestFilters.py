@@ -17,7 +17,5 @@ class RequestFilters(ResponseFilter):
 
 	def run(self, request: Request) -> Request:
 		for f in self.filters:
-			request, response = f.run(request)
-			if response:
-				return request, response
-		return request, None
+			request = f.run(request)
+		return request

@@ -35,9 +35,10 @@ class RequestRunnerPropertiesHelper(Singleton):
 		mo = loader.load_module()
 		if not mo:
 			return None
-		if not mo.__getattribute__(name):
+		try:
+			return mo.__getattribute__(name)
+		except AttributeError as e:
 			return None
-		return mo.__getattribute__(name)
 
 	@classmethod
 	def Add(cls, properties: RequestRunnerProperties):
