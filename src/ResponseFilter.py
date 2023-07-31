@@ -2,19 +2,16 @@
 
 from .Response import Response
 
+from abc import ABC, abstractmethod
+
 __all__ = (
 	'ResponseFilter',
 )
 
 
-class ResponseFilter(object):
-	"""
-	"""
-	def __init__(self, *args):
-		self.filters = args
-		return
+class ResponseFilter(ABC):
+	"""Request Filter Interface"""
 
+	@abstractmethod
 	def run(self, response: Response) -> Response:
-		for f in self.filters:
-			response = f.run(response)
-		return response
+		raise NotImplementedError('{} must be implemented run'.format(self.__class__.__name__))
