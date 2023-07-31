@@ -15,10 +15,9 @@ __all__ = (
 
 
 class RequestRunnerPropertiesHelper(Singleton):
-	"""
-	Request Runner Properties Helper
-	"""
-	def onInit(self, *args, **kwargs):
+	"""Request Runner Properties Helper"""
+
+	def __init__(self, *args, **kwargs):
 		self.properties = []
 		return
 
