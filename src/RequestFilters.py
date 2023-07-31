@@ -10,14 +10,12 @@ __all__ = (
 
 
 class RequestFilters(ResponseFilter):
-	"""
-	Request Fileter to Process Filters
-	"""
+	"""Request Fileters"""
 	def __init__(self, *args):
 		self.filters = args
 		return
 
-	def run(self, request: Request) -> tuple[Request, (Response, None)]:
+	def run(self, request: Request) -> Request:
 		for f in self.filters:
 			request, response = f.run(request)
 			if response:

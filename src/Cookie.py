@@ -6,9 +6,7 @@ __all__ = (
 
 
 class Cookie(object):
-	"""
-	Cookie Class
-	"""
+	"""Cookie Class"""
 
 	def __init__(
 			self,

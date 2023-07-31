@@ -13,9 +13,8 @@ __all__ = (
 
 
 class Request(object):
-	"""
-	HTTP Request Class
-	"""
+	"""HTTP Request Class"""
+
 	def __init__(self, method: str, uri: str, version: str, headers: dict = None, body: bytes = None, format: str = None, charset: str = None):
 		self.method = method
 		# self.uri = uri

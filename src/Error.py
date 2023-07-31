@@ -8,9 +8,8 @@ __all__ = (
 
 
 class Error(BaseException):
-	"""
-	Error Class of Web Application
-	"""
+	"""Error Class of Web Application"""
+
 	def __init__(self, status, message, reason=None, error=None):
 		super(Error, self).__init__()
 		self.status = status

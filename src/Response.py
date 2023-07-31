@@ -14,9 +14,8 @@ __all__ = (
 
 
 class Response(object):
-	"""
-	HTTP Response Class
-	"""
+	"""HTTP Response Class"""
+
 	def __init__(self, status: int, message: str, version: str, headers: dict = None, body=None, format=None, charset=None):
 		self.status = status
 		self.message = message

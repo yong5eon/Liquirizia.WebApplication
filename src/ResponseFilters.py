@@ -4,12 +4,19 @@ from .Response import Response
 from .ResponseFilter import ResponseFilter
 
 __all__ = (
-	'ResponseFilters',
+	'ResponseFilter',
 )
 
 
 class ResponseFilters(ResponseFilter):
-	"""
-	"""
+	"""Response Filters"""
+
+	def __init__(self, *args):
+		self.filters = args
+		return
+
 	def run(self, response: Response) -> Response:
-		raise NotImplementedError('{} must be implemented run'.format(self.__class__.__name__))
+		for f in self.filters:
+			response = f.run(response)
+		return response
+

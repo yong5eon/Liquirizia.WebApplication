@@ -10,9 +10,8 @@ __all__ = (
 
 
 class RequestReader(object):
-	"""
-	Request Reader Class
-	"""
+	"""Request Reader Class"""
+
 	CRLF = '\r\n'
 
 	def __init__(self, reader: BufferedReader):

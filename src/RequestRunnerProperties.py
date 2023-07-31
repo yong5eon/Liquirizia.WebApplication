@@ -13,9 +13,8 @@ __all__ = (
 
 
 class RequestRunnerProperties(object):
-	"""
-	Request Runner Properties Class
-	"""
+	"""Request Runner Properties Class"""
+
 	def __init__(
 		self,
 		object: type(RequestRunner),

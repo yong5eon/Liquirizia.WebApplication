@@ -12,9 +12,8 @@ __all__ = (
 
 
 class ResponseWriter(object):
-	"""
-	Response Writer Class
-	"""
+	"""Response Writer Class"""
+
 	CRLF = '\r\n'
 
 	def __init__(self, writer: BufferedWriter, version: str, headers: dict = None):
