@@ -3,7 +3,7 @@
 from ..Response import Response
 from ..Error import Error
 
-from ..Serializer import SerializerHelper
+from Liquirizia.Serializer import SerializerHelper
 
 __all__ = (
 	'ResponseError'
