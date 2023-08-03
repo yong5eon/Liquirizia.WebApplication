@@ -32,3 +32,4 @@
 * [ ] RequestWriter : 요청 라이터
 * [ ] ResponseReader : 응답 리더
 * [ ] WebClientRunner : ResponseRunner 를 활용한 병렬 요청 처리기
+* [ ] Encoder 를 Serializer 로 이관

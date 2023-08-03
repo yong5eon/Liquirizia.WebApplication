@@ -2,7 +2,7 @@
 
 from ..Response import Response
 
-from ..Serializer import SerializerHelper
+from Liquirizia.Serializer import SerializerHelper
 
 __all__ = (
 	'ResponseNotFound'
